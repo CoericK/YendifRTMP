@@ -28,6 +28,20 @@
             embed: 1,
             keyboard: 1
         }
+
+        // ensure DOM is ready
+        $(function () {
+
+            // this will install yendifplayer into an element with id="player"
+            $("#player").yendifplayer ({
+                videos:{
+                    rtmp:"rtmp://54.163.148.239/live/",
+                    flash:"mystreamkey"
+                }
+            });
+
+        });
+
     </script>
     <!--******************************************************************************************-->
     <!--Yendifplayer header configuration[enf]-->
@@ -97,23 +111,7 @@
     </style>
 </head>
 <body>
-<h2>Welcome to Yendifplayer !</h2>
-<div class="main">
-    <div class="yendifplayer">
-        <video poster="http://yendifplayer.com/videos/sampleOne.jpg">
-            <source type="video/mp4" src="http://yendifplayer.com/videos/sampleOne.mp4">
-            <track src="subtitles.vtt">
-        </video>
-    </div>
-    <h3><a href="http://yendifplayer.com/demo/">Click here</a> for more demos [+]</h3>
-</div>
-<div class="footer">
-    <ul>
-        <li><a href="http://yendifplayer.com/faq.html" target="_blank">FAQ</a></li>
-        <li><a href="http://yendifplayer.com/license.html" target="_blank">License</a></li>
-        <li><a href="http://yendifplayer.com/terms-of-use.html" target="_blank">Terms of Use</a></li>
-    </ul>
-    <p>Copyright � 2013-2014 Yendifplayer. All rights reserved.</p>
-</div>
+<!-- empty container element with unique id="player" -->
+<div id="player"></div>
 </body>
 </html>
